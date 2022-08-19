@@ -1,0 +1,7 @@
+<pre>{{ products | json }}</pre>
+
+<li *ngFor="let product of products">
+  {{ product.label }} - € {{ product.cost }}
+  <button (click)="deleteProduct(product)">Delete</button>
+</li>
+<div [style.color]="priceColor()">Total: {{ getTotal() }}</div>
